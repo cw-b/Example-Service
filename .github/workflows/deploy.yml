@@ -12,6 +12,7 @@ jobs:
             deployment_id: "123"
             release_id: "456"
             state: "DEPLOYING"
+        secrets: inherit
             
     call_deployment_log_workflow_deployed:
         uses: cw-b/Deployments/.github/workflows/deployment_log.yml@main
@@ -19,3 +20,4 @@ jobs:
             deployment_id: "123"
             release_id: "456"
             state: "DEPLOYED"
+        secrets: inherit
