@@ -1,0 +1,21 @@
+name: Deploy
+
+on:
+    push:
+        branches:
+            - main
+
+jobs:
+    call_deployment_log_workflow_deploying:        
+        uses: cw-b/Deployments/.github/workflows/deployment_log.yml@main
+        with:
+            deployment_id: "123"
+            release_id: "456"
+            state: "DEPLOYING"
+            
+    call_deployment_log_workflow_deployed:
+        uses: cw-b/Deployments/.github/workflows/deployment_log.yml@main
+        with:
+            deployment_id: "123"
+            release_id: "456"
+            state: "DEPLOYED"
