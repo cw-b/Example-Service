@@ -10,7 +10,7 @@ jobs:
         uses: cw-b/Deployments/.github/workflows/deployment_log.yml@main
         with:
             DEPLOYMENT_STATE: "DEPLOY_STARTED"
-            DEPLOYMENT_TOOL: "TEST"
+            DEPLOYMENT_TOOL: "OCTOPUS"
             DEPLOYMENT_ENVIRONMENT: "DEVELOPMENT"
             TENANT: "A0T"
         secrets: inherit
@@ -20,7 +20,7 @@ jobs:
         needs: call_deployment_log_workflow_deploying
         with:
             DEPLOYMENT_STATE: "DEPLOY_COMPLETED"
-            DEPLOYMENT_TOOL: "TEST"
+            DEPLOYMENT_TOOL: "OCTOPUS"
             DEPLOYMENT_ENVIRONMENT: "DEVELOPMENT"
             TENANT: "A0T"
         secrets: inherit
